@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>
+        <b>
+        Simple Calculator
+        </b>
+    </h1>
+    <div id="calculator">
+        <div id="container">
+            <div id="result"></div>
+        </div>
+        <div id="top">
+        <button onclick="clearall()">AC</button>
+        <button onclick="deletelast()">C</button>
+        <button onclick="appendtodisplay('+')">+</button>
+        <button onclick="appendtodisplay('-')">-</button>
+        <br>
+        <button onclick="appendtodisplay('7')">7</button>
+        <button onclick="appendtodisplay('8')">8</button>
+        <button onclick="appendtodisplay('9')">9</button>
+        <button onclick="appendtodisplay('*')">*</button>
+        <br>
+        <button onclick="appendtodisplay('4')">4</button>
+        <button onclick="appendtodisplay('5')">5</button>
+        <button onclick="appendtodisplay('6')">6</button>
+        <button onclick="appendtodisplay('/')">/</button>
+        <br>
+        <button onclick="appendtodisplay('1')">1</button>
+        <button onclick="appendtodisplay('2')">2</button>
+        <button onclick="appendtodisplay('3')">3</button>
+        <button onclick="appendtodisplay('%')">%</button>
+        <br>
+        <button onclick="appendtodisplay('0')">0</button>
+        <button onclick="appendtodisplay('00')">00</button>
+        <button class="double" onclick="calculateresult()">=</button>
+        </div>
+    </div>
+    <script>
+        let displayvalue="";
+        function appendtodisplay(value)
+        {
+            displayvalue+=value;
+            updatedisplay();
+        }
+        function updatedisplay()
+        {
+            const container=document.getElementById("result")
+            container.innerText=displayvalue;
+            if(container.scrollWidth>container.clientWidth-1)
+            {
+                const diff=container.scrollWidth-container.clientWidth;
+                container.style.marginLeft=-diff+"px";
+            }
+            else{
+                container.style.marginLeft="0";
+            }
+        }
+        function clearall()
+        {
+            displayvalue="";
+            updatedisplay();
+        }
+        function deletelast()
+        {
+            displayvalue=displayvalue.slice(0,-1);
+            updatedisplay();
+        }
+        function calculateresult()
+        {
+            try
+            {
+                const result=eval(displayvalue);
+                displayvalue=result.toString();
+                updatedisplay();
+
+            }catch(error)
+            {
+                document.getElementById("result").innerText="SYNTAX ERROR";
+                displayvalue="";
+            }
+        }
+    </script>
+</body>
+</html>

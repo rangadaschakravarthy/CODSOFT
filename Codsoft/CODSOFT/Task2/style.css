@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    font-size: medium;
+}
+section {
+    text-align: center;
+    padding: 40px 0;
+}
+.content{
+    max-width: 800px;
+    margin:0 auto;
+    padding:0 20px;
+}
+header{
+    background-color: #333;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+.header-content{
+    max-width: 600px;
+    margin:0 auto;
+    text-align: center;
+    padding: 20px;
+}
+.header-image{
+    max-width:fit-content;
+    width:100px;
+    height:auto;
+    border-radius: 5%;
+}
+header h1,header p{
+    text-align: center;
+}
+#about img{
+    max-width: 150px;
+    border-radius: 10px;
+}
+#about.content{
+    text-align: center;
+}
+#skills{
+    padding:40px 0;
+    text-align: center;
+}
+.skills-list{
+    list-style:none;
+    padding:0;
+}
+.skills-list li{
+    margin:10px 0;
+    text-align: left;
+}
+.skills-name{
+    font-weight:bold;
+}
+.skill-bar{
+    background-color: #ccc;
+    height: px;
+    border-radius: 10px;
+    margin-top:10px;
+    display: inline-block;
+    width:500px;
+}
+.skill-level{
+    background-color: #4caf50;
+    color:white;
+    text-align: right;
+    border-radius:10px;
+    padding:5px;
+}
+#projects{
+    margin-top:20px;
+}
+.project img{
+    max-width:80%;
+    border-radius: 10px;
+    margin: 10px auto;
+    display:block;
+}
+#contact{
+    padding:40px 0;
+    text-align: center;
+}
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align:center;
+    padding:10px;
+}
+.fcontent{
+    text-align:center;
+    margin-top: 20px;
+}
+#certificates .content {
+    text-align: center;
+}
+.certificates{
+    margin:0 10px;
+    text-align:center;
+}
+.certificates img{
+    max-width: 400px;
+    max-height: 4000px;
+}
+.certificate a {
+    display: block;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.certificates-container {
+    display: flex;
+    justify-content: space-around;
+}
+footer p{
+    background-color: #333;
+    color:#fff;
+    padding: 10px;
+    text-align: center;
+}
+#skills.content {
+    text-align: center;
+}
+#projects.content {
+    text-align: center;
+}
+#resume.content {
+    text-align: center;
+}
+#contact.content {
+    text-align: center;
+}
+#certificates.content {
+    text-align: center;
+}
